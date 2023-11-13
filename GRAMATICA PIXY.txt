@@ -1,0 +1,49 @@
+//simbolo inicial
+PX -> V | RF | RI | RW | S	
+
+//producciones
+V -> L RL AS TP VL
+RF -> F AS L RL PR LA C R LC
+RI -> I CD AS LA C LC RE
+RW -> W CD AS LA C LC
+S -> SW OP AS LA CA RCA DF LC
+
+RL -> L RL | ε 
+RN -> N RN | ε 
+VL -> PA CM L RL CC PC | PA N RN PC | ε 
+P -> TP L RL | ε
+PR -> PA P RP PC
+RP -> CO P RP | ε 
+CD -> PA L RL OR RC PC 
+RC -> L RL | N RN
+RE -> E AS LA C LR | ε 
+OP -> PA L RL PC
+CA -> CE N RN AS LA C BR LC
+RCA -> CA RCA | ε 
+DF -> DT AS LA C LC
+R -> RT ORT | ε
+ORT -> PA CM L RL CC PC | PA L RL PC | PA N RN PC
+
+//simbolos terminales
+N -> '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' 
+L -> 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' 
+TP -> 'int' | 'string'
+AS -> '=>'
+PA -> '(' 
+PC -> ')'
+CM -> '"'
+CC -> '"'
+CO -> ','
+F -> 'Fn'
+C -> 'contenido'
+LA -> '{'
+LC -> '}'
+I -> 'if'
+OR -> '<' | '>' | '==' | '>=' | '<=' | '!=' 
+E -> 'else'
+W -> 'while'
+SW -> 'switch'
+CE -> 'case'
+DT -> 'default'
+BR -> 'break'
+RT -> 'rtn' 
